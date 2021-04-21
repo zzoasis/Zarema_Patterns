@@ -34,7 +34,7 @@ class FinalPoints  implements IFinalPoints  {
 
     @Override
     public void givetwelve() {
-       System.out.println("Норвегия дает 12 баллов Италии");
+       System.out.println("Норвегия дает 12 баллов Мальте");
     }
 
 }
