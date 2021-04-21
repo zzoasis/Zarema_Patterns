@@ -4,21 +4,21 @@ interface IFinal {
 
     void finalist(boolean passed);
 }
-class TheNetherlands implements IFinal {
+class TheNetherlandsPassed implements IFinal {
     @Override
     public void finalist(boolean passed) {
         System.out.println("Нидерланды прошли?" + passed);
     }
 
 }
-class Norway implements IFinal {
+class NorwayPassed implements IFinal {
     @Override
     public void finalist(boolean passed) {
         System.out.println("Норвегия прошла?" + passed);
     }
 }
 
-class Russia implements IFinal {
+class RussiaPassed implements IFinal {
     @Override
     public void finalist(boolean passed) {
         System.out.println("Россия прошла?" + passed);
@@ -26,7 +26,7 @@ class Russia implements IFinal {
 
 }
 
-class Malta implements IFinal {
+class MaltaPassed implements IFinal {
     @Override
     public void finalist(boolean passed) {
         System.out.println("Мальта прошла?" + passed);
@@ -34,7 +34,7 @@ class Malta implements IFinal {
 
 }
 
-class Poland implements IFinal {
+class PolandPassed implements IFinal {
     @Override
     public void finalist(boolean passed) {
         System.out.println("Польша прошла?" + passed);
@@ -64,15 +64,15 @@ public class StrategyParticipant {
 
     public static void main(String[] args) {
         System.out.println("Финалисты Евровидения:");
-        Eurovision eurovision = new Eurovision(new TheNetherlands());
+        Eurovision eurovision = new Eurovision(new TheNetherlandsPassed());
         eurovision.passedFinal(true);
-        eurovision.setFinal(new Norway());
+        eurovision.setFinal(new NorwayPassed());
         eurovision.passedFinal(false);
-        eurovision.setFinal(new Russia());
+        eurovision.setFinal(new RussiaPassed());
         eurovision.passedFinal(true);
-        eurovision.setFinal(new Malta());
+        eurovision.setFinal(new MaltaPassed());
         eurovision.passedFinal(true);
-        eurovision.setFinal(new Poland());
+        eurovision.setFinal(new PolandPassed());
         eurovision.passedFinal(false);
     }
 }

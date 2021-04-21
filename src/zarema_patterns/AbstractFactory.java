@@ -1,12 +1,12 @@
 package zarema_patterns;
 
-interface IMalta
+interface INorway
  {
-    public IMaltaGive givePoints();
+    public INorwayGive givePoints();
     public IFinalPoints giveFinalPoints();
 }
 
-interface IMaltaGive {
+interface INorwayGive {
     public void giveeight();
     public void giveten();
     
@@ -16,17 +16,17 @@ interface IFinalPoints  {
     public void givetwelve();
 }
 
-class MaltaGive implements IMaltaGive {
+class NorwayGive implements INorwayGive {
 
    
     @Override
     public void giveeight() {
-       System.out.println("Мальта дает 8 баллов России");
+       System.out.println("Норвегия дает 8 баллов России");
     }
 
     @Override
     public void giveten() {
-       System.out.println("Мальта дает 10 баллов Нидерландам");
+       System.out.println("Норвегия дает 10 баллов Нидерландам");
     }
 }
 
@@ -34,17 +34,17 @@ class FinalPoints  implements IFinalPoints  {
 
     @Override
     public void givetwelve() {
-       System.out.println("Мальта дает 12 баллов Италии");
+       System.out.println("Норвегия дает 12 баллов Италии");
     }
 
 }
 
-class Malta implements IMalta {
-    IMaltaGive give = new MaltaGive();
+class Norway implements INorway {
+    INorwayGive give = new NorwayGive();
     IFinalPoints finalPoints = new FinalPoints();
 
     @Override
-    public IMaltaGive givePoints() {
+    public INorwayGive givePoints() {
         return give;
     }
 
@@ -56,9 +56,9 @@ class Malta implements IMalta {
     }
 public class AbstractFactory {
     public static void main(String[] args) {
-        IMalta malta  = new Malta ();
-        malta.givePoints().giveeight();
-        malta.givePoints().giveten();
-        malta.giveFinalPoints().givetwelve();
+        INorway norway  = new Norway ();
+        norway.givePoints().giveeight();
+        norway.givePoints().giveten();
+        norway.giveFinalPoints().givetwelve();
     }
 }
