@@ -7,8 +7,8 @@ interface IVoting {
     int getPoints();
 }
 class Voting implements IVoting {
-    private String country;
-    private int points;
+    private final String country;
+    private final int points;
 
     public Voting(String country, int points) {
         this.country = country;

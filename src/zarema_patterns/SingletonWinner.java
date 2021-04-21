@@ -9,7 +9,7 @@ final class winner {
     }
     
     public int getPoints() {
-        points=25;
+        points=45;
         if (points>35) {
             System.out.println("Нидерланды опередила Италию!");
         } else {
